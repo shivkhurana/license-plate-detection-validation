@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+  node1:
+    build: .
+    environment:
+      - NODE_ID=node1
+      - NODE_PORT=8001
+    ports:
+      - 8001:8001
+    command: uvicorn app.node_api:app --host 0.0.0.0 --port 8001
+  node2:
+    build: .
+    environment:
+      - NODE_ID=node2
+      - NODE_PORT=8002
+    ports:
+      - 8002:8002
+    command: uvicorn app.node_api:app --host 0.0.0.0 --port 8002
+  node3:
+    build: .
+    environment:
+      - NODE_ID=node3
+      - NODE_PORT=8003
+    ports:
+      - 8003:8003
+    command: uvicorn app.node_api:app --host 0.0.0.0 --port 8003
+  node4:
+    build: .
+    environment:
+      - NODE_ID=node4
+      - NODE_PORT=8004
+    ports:
+      - 8004:8004
+    command: uvicorn app.node_api:app --host 0.0.0.0 --port 8004
+  node5:
+    build: .
+    environment:
+      - NODE_ID=node5
+      - NODE_PORT=8005
+    ports:
+      - 8005:8005
+    command: uvicorn app.node_api:app --host 0.0.0.0 --port 8005
